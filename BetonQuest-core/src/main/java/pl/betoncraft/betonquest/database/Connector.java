@@ -333,6 +333,10 @@ public class Connector {
                     statement = connection
                             .prepareStatement("UPDATE " + prefix + "points SET category = ? WHERE category = ?;");
                     break;
+                case RENAME_ALL_GLOBALPOINTS:
+                    statement = connection
+                            .prepareStatement("UPDATE " + prefix + "global_points SET category = ? WHERE category = ?;");
+                    break;
                 case RENAME_ALL_OBJECTIVES:
                     statement = connection
                             .prepareStatement("UPDATE " + prefix + "objectives SET objective = ? WHERE objective = ?;");
